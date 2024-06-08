@@ -72,6 +72,7 @@ const Screenshot = styled.div`
   align-items: center;
   justify-content: center;
   color: #ffffff;
+  overflow: hidden;
 `;
 
 const Description = styled.div`
