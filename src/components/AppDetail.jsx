@@ -18,6 +18,7 @@ const CoverImage = styled.div`
   align-items: center;
   justify-content: center;
   font-size: 1.5em;
+  overflow: hidden;
   color: #ffffff;
 `;
 
@@ -113,7 +114,16 @@ const AppDetail = () => {
 
   return (
     <DetailContainer>
-      <CoverImage>Cover Image</CoverImage>
+      <CoverImage>
+        {appDetail.coverImage ? (
+          <img
+            src={appDetail.coverImage}
+            style={{ width: "100%", height: "100%" }}
+          />
+        ) : (
+          "Cover Image [WIDTH x 250]"
+        )}
+      </CoverImage>
       <AppInfo>
         <AppIcon>App Icon</AppIcon>
         <AppDetails>
