@@ -27,6 +27,7 @@ const AppInfo = styled.div`
   align-items: center;
   gap: 20px;
   margin-bottom: 30px;
+  flex-wrap: wrap;
 `;
 
 const AppIcon = styled.div`
@@ -60,7 +61,8 @@ const DeveloperName = styled.h2`
 const Screenshots = styled.div`
   display: flex;
   gap: 20px;
-  margin-top: 20px;
+  margin-top: 50px;
+  flex-wrap: wrap;
 `;
 
 const Screenshot = styled.div`
@@ -98,12 +100,13 @@ const InstallButton = styled.button`
 `;
 
 const AppDetail = () => {
-  const { id } = useParams();
+  const { slug } = useParams();
 
   // Sample static data
   const appDetail = {
     coverImage: "", // URL for cover image
     appName: "Sample App",
+    appSlug: "sample-app-1",
     developerName: "Developer Name",
     screenshots: ["", "", "", ""], // URLs for screenshots
     description: [
@@ -122,7 +125,7 @@ const AppDetail = () => {
             style={{ width: "100%", height: "100%" }}
           />
         ) : (
-          "Cover Image [WIDTH x 250]"
+          `Cover Image - ${appDetail.appName}`
         )}
       </CoverImage>
       <AppInfo>
@@ -132,6 +135,7 @@ const AppDetail = () => {
           <DeveloperName>{appDetail.developerName}</DeveloperName>
         </AppDetails>
       </AppInfo>
+      <InstallButton>INSTALL</InstallButton>
       <Screenshots>
         {appDetail.screenshots.map((screenshot, index) => (
           <Screenshot key={index}>SS - {index + 1}</Screenshot>
@@ -140,11 +144,10 @@ const AppDetail = () => {
       <Description>
         <ul>
           {appDetail.description.map((desc, index) => (
-            <li key={index}>{desc}</li>
+            <li style={{ listStyleType: "disc" }} key={index}>{`${desc}`}</li>
           ))}
         </ul>
       </Description>
-      <InstallButton>INSTALL</InstallButton>
     </DetailContainer>
   );
 };

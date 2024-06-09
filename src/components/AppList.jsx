@@ -70,9 +70,9 @@ const InstallButton = styled.button`
 const AppList = () => {
   // Sample static data for apps
   const apps = [
-    { id: 1, name: "App 1", icon: "Icon" },
-    { id: 2, name: "App 2", icon: "Icon" },
-    { id: 3, name: "App 3", icon: "Icon" },
+    { id: 1, name: "App 1", slug: "app-1", icon: "Icon" },
+    { id: 2, name: "App 2", slug: "app-2", icon: "Icon" },
+    { id: 3, name: "App 3", slug: "app-3", icon: "Icon" },
   ];
 
   return (
@@ -80,7 +80,7 @@ const AppList = () => {
       <Title>Android Apps</Title>
       <AppGrid>
         {apps.map((app) => (
-          <AppCard to={`/app/${app.id}`} key={app.id}>
+          <AppCard to={`/app/${app.slug}`} key={app.id}>
             <AppIcon>{app.icon}</AppIcon>
             <AppName>{app.name}</AppName>
             <InstallButton>INSTALL</InstallButton>

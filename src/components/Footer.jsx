@@ -71,17 +71,17 @@ const Footer = () => (
       <ProfileName>
         Sahil Kumar
         <br />
-        Developer
+        <small>Developer</small>
       </ProfileName>
     </Profile>
     <Contact>
-      <ContactLink href="https://krsahil.tech/">
+      <ContactLink href="https://krsahil.tech/" target="_blank">
         <FaGlobe /> https://krsahil.tech/
       </ContactLink>
       <ContactLink href="tel:+911234567890">
         <FaPhone /> +91 98765 43210
       </ContactLink>
-      <ContactLink href="mailto:sahil1206910@gmail.com">
+      <ContactLink href="mailto:sahil1206910@gmail.com" target="_blank">
         <FaEnvelope /> sahil1206910@gmail.com
       </ContactLink>
       <ContactLink href="#">

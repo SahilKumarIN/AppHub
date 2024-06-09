@@ -6,6 +6,7 @@ const HeaderContainer = styled.header`
   justify-content: space-between;
   padding: 20px 40px;
   background-color: #1e1e1e;
+  flex-wrap: wrap;
 `;
 
 const Title = styled.h1`
