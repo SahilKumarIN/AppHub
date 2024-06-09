@@ -6,15 +6,23 @@ const FooterContainer = styled.footer`
   padding: 20px 40px;
   background-color: #1e1e1e;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
   color: #fff;
-  flex-wrap: wrap;
+  @media (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 `;
 
 const Profile = styled.div`
   display: flex;
   align-items: center;
+  margin-bottom: 20px;
+  text-align: center;
+  @media (min-width: 768px) {
+    margin-bottom: 0;
+  }
 `;
 
 const ProfileCircle = styled.div`
@@ -25,18 +33,31 @@ const ProfileCircle = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.2em;
-  color: #fff;
+  overflow: hidden;
   margin-right: 10px;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
 `;
 
 const ProfileName = styled.div`
   font-size: 1.2em;
+  a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+    &:hover {
+      color: #007bff;
+    }
+  }
 `;
 
 const Contact = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
 `;
 
 const ContactLink = styled.a`
@@ -60,32 +81,26 @@ const Footer = () => (
   <FooterContainer>
     <Profile>
       <ProfileCircle>
-        <img
-          width="100%"
-          height={"100%"}
-          style={{ overflow: "hidden", borderRadius: "50%" }}
-          src="sahil_dark_logo.png"
-          alt="Sahil Kumar"
-        />
+        <img src="sahil_dark_logo.png" alt="Profile" />
       </ProfileCircle>
       <ProfileName>
-        Sahil Kumar
+        <a href="https://krsahil.tech/">Sahil Kumar</a>
         <br />
-        <small>Developer</small>
+        Developer
       </ProfileName>
     </Profile>
     <Contact>
-      <ContactLink href="https://krsahil.tech/" target="_blank">
+      <ContactLink href="https://krsahil.tech/">
         <FaGlobe /> https://krsahil.tech/
       </ContactLink>
       <ContactLink href="tel:+911234567890">
-        <FaPhone /> +91 98765 43210
+        <FaPhone /> +91 12345 67890
       </ContactLink>
-      <ContactLink href="mailto:sahil1206910@gmail.com" target="_blank">
-        <FaEnvelope /> sahil1206910@gmail.com
+      <ContactLink href="mailto:email@email.com">
+        <FaEnvelope /> email@email.com
       </ContactLink>
       <ContactLink href="#">
-        <FaMapMarkerAlt /> [IN] India , Asia
+        <FaMapMarkerAlt /> BCET, DGR, W.B.
       </ContactLink>
     </Contact>
   </FooterContainer>

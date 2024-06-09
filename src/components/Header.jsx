@@ -7,11 +7,22 @@ const HeaderContainer = styled.header`
   padding: 20px 40px;
   background-color: #1e1e1e;
   flex-wrap: wrap;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
 `;
 
 const Title = styled.h1`
   font-size: 1.5em;
   color: #fff;
+  margin: 0;
+
+  @media (max-width: 768px) {
+    margin-bottom: 10px;
+  }
 `;
 
 const Nav = styled.nav`
@@ -24,6 +35,17 @@ const Nav = styled.nav`
     &:hover {
       color: #fff;
     }
+
+    @media (max-width: 768px) {
+      margin-left: 0;
+      margin-bottom: 10px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 `;
 
