@@ -1,6 +1,9 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 import styled from "styled-components";
+import data from "../../data.json";
+
+const { apps } = data;
 
 const DetailContainer = styled.div`
   padding: 20px;
@@ -24,6 +27,13 @@ const CoverImage = styled.div`
   font-size: 1.5em;
   overflow: hidden;
   color: #ffffff;
+`;
+
+const CoverImageImg = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 `;
 
 const AppInfo = styled.div`
@@ -104,7 +114,7 @@ const Description = styled.div`
   }
 `;
 
-const InstallButton = styled.button`
+const InstallButton = styled.a`
   padding: 12px 25px;
   background-color: #007bff;
   border: none;
@@ -120,37 +130,30 @@ const InstallButton = styled.button`
   }
 `;
 
-const AppDetail = () => {
+const AppDetail = ({ data }) => {
   const { slug } = useParams();
 
+  const appDetail = apps.find((app) => app.appSlug === slug);
   // Sample static data
-  const appDetail = {
-    coverImage:
-      "https://images.unsplash.com/photo-1484950763426-56b5bf172dbb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", // URL for cover image
-    appName: "Sample App",
-    appSlug: "sample-app-1",
-    developerName: "Developer Name",
-    screenshots: ["", "", "", ""], // URLs for screenshots
-    description: [
-      "This app is built using this this this ....",
-      "This app solves this problem ....",
-      "This ...",
-    ],
-  };
+  // const appDetail = {
+  //   coverImage:
+  //     "https://images.unsplash.com/photo-1484950763426-56b5bf172dbb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", // URL for cover image
+  //   appName: "Sample App",
+  //   appSlug: "sample-app-1",
+  //   developerName: "Developer Name",
+  //   screenshots: ["", "", "", ""], // URLs for screenshots
+  //   description: [
+  //     "This app is built using this this this ....",
+  //     "This app solves this problem ....",
+  //     "This ...",
+  //   ],
+  // };
 
   return (
     <DetailContainer>
       <CoverImage>
         {appDetail.coverImage ? (
-          <img
-            src={appDetail.coverImage}
-            style={{
-              maxWidth: "100%",
-              height: "auto",
-              objectFit: "cover",
-              objectPosition: "center",
-            }}
-          />
+          <CoverImageImg src={appDetail.coverImage} alt="Cover" />
         ) : (
           `Cover Image`
         )}
@@ -162,7 +165,12 @@ const AppDetail = () => {
           <DeveloperName>{appDetail.developerName}</DeveloperName>
         </AppDetails>
       </AppInfo>
-      <InstallButton>INSTALL</InstallButton>
+      <InstallButton
+        href="https://drive.usercontent.google.com/download?id=1Vf4a-nCAFYFVxqtgOJh87YLU7lD9OLdf&export=download"
+        download={`${appDetail.appName}.apk`}
+      >
+        INSTALL
+      </InstallButton>
       <Screenshots>
         {appDetail.screenshots.map((screenshot, index) => (
           <Screenshot key={index}>SS - {index + 1}</Screenshot>

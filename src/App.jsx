@@ -23,7 +23,7 @@ const App = () => (
             </>
           }
         />
-        <Route path="/app/:id" element={<AppDetail />} />
+        <Route path="/app/:slug" element={<AppDetail />} />
       </Routes>
       <Footer />
     </div>

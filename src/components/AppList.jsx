@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { apps } from "../../data.json";
 
 const ListContainer = styled.div`
   padding: 40px;
@@ -69,20 +70,15 @@ const InstallButton = styled.button`
 
 const AppList = () => {
   // Sample static data for apps
-  const apps = [
-    { id: 1, name: "App 1", slug: "app-1", icon: "Icon" },
-    { id: 2, name: "App 2", slug: "app-2", icon: "Icon" },
-    { id: 3, name: "App 3", slug: "app-3", icon: "Icon" },
-  ];
 
   return (
     <ListContainer>
       <Title>Android Apps</Title>
       <AppGrid>
         {apps.map((app) => (
-          <AppCard to={`/app/${app.slug}`} key={app.id}>
-            <AppIcon>{app.icon}</AppIcon>
-            <AppName>{app.name}</AppName>
+          <AppCard to={`/app/${app.appSlug}`} key={app.id}>
+            <AppIcon>{app.appIcon}</AppIcon>
+            <AppName>{app.appName}</AppName>
             <InstallButton>INSTALL</InstallButton>
           </AppCard>
         ))}
