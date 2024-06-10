@@ -54,6 +54,14 @@ const AppIcon = styled.div`
   justify-content: center;
   font-size: 1.5em;
   color: #ffffff;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
 `;
 
 const AppDetails = styled.div`
@@ -93,8 +101,8 @@ const Screenshots = styled.div`
 
 const Screenshot = styled.div`
   background-color: #444;
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: auto;
   border-radius: 8px;
   display: flex;
   align-items: center;
@@ -102,6 +110,13 @@ const Screenshot = styled.div`
   color: #ffffff;
   overflow: hidden;
   flex: 0 0 auto;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
 `;
 
 const Description = styled.div`
@@ -159,21 +174,26 @@ const AppDetail = ({ data }) => {
         )}
       </CoverImage>
       <AppInfo>
-        <AppIcon>App Icon</AppIcon>
+        <AppIcon>
+          <img src={appDetail.appIcon} alt="App Icon" />
+        </AppIcon>
         <AppDetails>
           <AppName>{appDetail.appName}</AppName>
           <DeveloperName>{appDetail.developerName}</DeveloperName>
         </AppDetails>
       </AppInfo>
       <InstallButton
-        href="https://drive.usercontent.google.com/download?id=1Vf4a-nCAFYFVxqtgOJh87YLU7lD9OLdf&export=download"
+        target="_blank"
+        href={appDetail.appLink}
         download={`${appDetail.appName}.apk`}
       >
         INSTALL
       </InstallButton>
       <Screenshots>
         {appDetail.screenshots.map((screenshot, index) => (
-          <Screenshot key={index}>SS - {index + 1}</Screenshot>
+          <Screenshot key={index}>
+            <img src={screenshot} alt={`SS - ${index + 1}`} />
+          </Screenshot>
         ))}
       </Screenshots>
       <Description>

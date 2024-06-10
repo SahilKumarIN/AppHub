@@ -45,6 +45,14 @@ const AppIcon = styled.div`
   font-size: 1.2em;
   margin: 0 auto 20px;
   color: #ffffff;
+  overflow: hidden;
+
+  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover,
+    object-position: center;
+  }
 `;
 
 const AppName = styled.h3`
@@ -77,7 +85,9 @@ const AppList = () => {
       <AppGrid>
         {apps.map((app) => (
           <AppCard to={`/app/${app.appSlug}`} key={app.id}>
-            <AppIcon>{app.appIcon}</AppIcon>
+            <AppIcon>
+              <img src={app.appIcon} alt="App Icon" />
+            </AppIcon>
             <AppName>{app.appName}</AppName>
             <InstallButton>INSTALL</InstallButton>
           </AppCard>

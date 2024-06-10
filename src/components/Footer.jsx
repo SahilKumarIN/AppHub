@@ -93,14 +93,14 @@ const Footer = () => (
       <ContactLink href="https://krsahil.tech/">
         <FaGlobe /> https://krsahil.tech/
       </ContactLink>
-      <ContactLink href="tel:+911234567890">
+      {/* <ContactLink href="tel:+911234567890">
         <FaPhone /> +91 12345 67890
-      </ContactLink>
-      <ContactLink href="mailto:email@email.com">
-        <FaEnvelope /> email@email.com
+      </ContactLink> */}
+      <ContactLink href="mailto:sahil1206910@gmail.com">
+        <FaEnvelope /> sahil1206910@gmail.com
       </ContactLink>
       <ContactLink href="#">
-        <FaMapMarkerAlt /> BCET, DGR, W.B.
+        <FaMapMarkerAlt /> Bhagalpur , Bihar
       </ContactLink>
     </Contact>
   </FooterContainer>

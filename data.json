@@ -4,15 +4,23 @@
       "appSlug": "gym-app",
       "appName": "Gym App",
       "developerName": "Sahil Kumar",
-      "screenshots": ["", "", "", ""],
+      "appLink": "https://drive.google.com/u/0/uc?id=1hIn7NyILa56WEEWrwGglXGurf8rtkLVh&export=download",
+      "screenshots": [
+        "https://firebasestorage.googleapis.com/v0/b/krsahilme-website.appspot.com/o/gym-app-1.jpg?alt=media&token=abfc701d-b451-482c-a883-f602e04cebf2", 
+      "https://firebasestorage.googleapis.com/v0/b/krsahilme-website.appspot.com/o/gym-app-2.jpg?alt=media&token=abfc701d-b451-482c-a883-f602e04cebf2", 
+      "https://firebasestorage.googleapis.com/v0/b/krsahilme-website.appspot.com/o/gym-app-3.jpg?alt=media&token=abfc701d-b451-482c-a883-f602e04cebf2",
+      "https://firebasestorage.googleapis.com/v0/b/krsahilme-website.appspot.com/o/gym-app-4.jpg?alt=media&token=abfc701d-b451-482c-a883-f602e04cebf2",
+      "https://firebasestorage.googleapis.com/v0/b/krsahilme-website.appspot.com/o/gym-app-5.jpg?alt=media&token=abfc701d-b451-482c-a883-f602e04cebf2",
+      "https://firebasestorage.googleapis.com/v0/b/krsahilme-website.appspot.com/o/gym-app-6.jpg?alt=media&token=abfc701d-b451-482c-a883-f602e04cebf2"
+    ],
       "description": [
-        "This app is built using this this this ....",
-        "This app solves this problem ....",
-        "This ..."
+        "This app is built using React-Native.",
+        "In this app there is an integrated store where users can shop the gym equipments for this Razorpay PG is integrated.",
+        "React-reanimated library is used for animation of the components."
       ],
       "coverImage":
         "https://images.unsplash.com/photo-1484950763426-56b5bf172dbb?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "appIcon": "Icon"
+      "appIcon": "https://firebasestorage.googleapis.com/v0/b/krsahilme-website.appspot.com/o/GymApp.gif?alt=media&token=a04a9c06-18cc-4845-9d10-adffb6254294"
     }
   ]
 }
