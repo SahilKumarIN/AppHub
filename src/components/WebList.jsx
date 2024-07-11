@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-
+import { web } from "../../data.json";
 const ListContainer = styled.div`
   padding: 40px;
   background-color: #121212;
@@ -67,33 +67,11 @@ const TechStack = styled.p`
 `;
 
 const WebList = () => {
-  // Sample static data for websites
-  const websites = [
-    {
-      id: 1,
-      name: "Website 1",
-      url: "https://url1.com",
-      techStack: "HTML, CSS, JS",
-    },
-    {
-      id: 2,
-      name: "Website 2",
-      url: "https://url2.com",
-      techStack: "HTML, CSS, JS",
-    },
-    {
-      id: 3,
-      name: "Website 3",
-      url: "https://url3.com",
-      techStack: "HTML, CSS, JS",
-    },
-  ];
-
   return (
     <ListContainer>
       <Title>Web Apps</Title>
       <WebGrid>
-        {websites.map((website) => (
+        {web.map((website) => (
           <WebCard key={website.id}>
             <WebsiteScreenshot>Website SS</WebsiteScreenshot>
             <WebsiteName>{website.name}</WebsiteName>

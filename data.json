@@ -1,10 +1,11 @@
-{"apps" : [
+{
+  "apps" : [
     {
       "id": 1,
       "appSlug": "gym-app",
       "appName": "Gym App",
       "developerName": "Sahil Kumar",
-      "appLink": "./assets/GymApp.apk",
+      "appLink": "/assets/GymApp.apk",
       "screenshots": [
         "https://firebasestorage.googleapis.com/v0/b/krsahilme-website.appspot.com/o/gym-app-1.jpg?alt=media&token=abfc701d-b451-482c-a883-f602e04cebf2", 
       "https://firebasestorage.googleapis.com/v0/b/krsahilme-website.appspot.com/o/gym-app-2.jpg?alt=media&token=abfc701d-b451-482c-a883-f602e04cebf2", 
@@ -18,7 +19,7 @@
         "In this app there is an integrated store where users can shop the gym equipments for this Razorpay PG is integrated.",
         "React-reanimated library is used for animation of the components."
       ],
-      "coverImage": "./assets/app-cover-bg.png",
+      "coverImage": "/assets/app-cover-bg.png",
       "appIcon": "https://firebasestorage.googleapis.com/v0/b/krsahilme-website.appspot.com/o/GymApp.gif?alt=media&token=a04a9c06-18cc-4845-9d10-adffb6254294"
     },
     {
@@ -26,7 +27,7 @@
       "appSlug": "recipe-app",
       "appName": "Recipe App",
       "developerName": "Sahil Kumar",
-      "appLink": "./assets/RecipeApp.apk",
+      "appLink": "/assets/RecipeApp.apk",
       "screenshots": [
         "https://firebasestorage.googleapis.com/v0/b/krsahilme-website.appspot.com/o/recipe-app-1.jpg?alt=media&token=df0237c0-00f1-4949-8187-3027872ef83d", 
       "https://firebasestorage.googleapis.com/v0/b/krsahilme-website.appspot.com/o/recipe-app-2.jpg?alt=media&token=df0237c0-00f1-4949-8187-3027872ef83d", 
@@ -48,7 +49,7 @@
       "appSlug": "tic-tac-toe-app",
       "appName": "TicTacToe App",
       "developerName": "Sahil Kumar",
-      "appLink": "./assets/TicTacToe.apk",
+      "appLink": "/assets/TicTacToe.apk",
       "screenshots": [
         "https://firebasestorage.googleapis.com/v0/b/krsahilme-website.appspot.com/o/tic-tac-toe-1.jpg?alt=media&token=0419ad19-eebd-435e-9fe1-e6e3dc75fa07",
         "https://firebasestorage.googleapis.com/v0/b/krsahilme-website.appspot.com/o/tic-tac-toe-2.jpg?alt=media&token=0419ad19-eebd-435e-9fe1-e6e3dc75fa07",
@@ -69,7 +70,7 @@
       "appSlug": "weather-app",
       "appName": "Weather App",
       "developerName": "Sahil Kumar",
-      "appLink": "./assets/WeatherApp.apk",
+      "appLink": "/assets/WeatherApp.apk",
       "screenshots": [
         "https://firebasestorage.googleapis.com/v0/b/krsahilme-website.appspot.com/o/weather-app-1.jpg?alt=media&token=1d4f961a-ce5b-45fb-9fc3-6afb7bc43b02",
         "https://firebasestorage.googleapis.com/v0/b/krsahilme-website.appspot.com/o/weather-app-2.jpg?alt=media&token=1d4f961a-ce5b-45fb-9fc3-6afb7bc43b02",
@@ -86,6 +87,14 @@
       ],
       "coverImage": "/assets/app-cover-bg.png",
       "appIcon": ""
+    }
+  ],
+  "web": [
+    {
+      "id": 1,
+      "name": "UnlockCode",
+      "url": "https://unlockcode.web.app/",
+      "techStack": "React JS , CSS & Firebase"
     }
   ]
 }
