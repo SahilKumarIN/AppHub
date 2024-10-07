@@ -95,6 +95,13 @@
       "name": "UnlockCode",
       "url": "https://unlockcode.web.app/",
       "techStack": "React JS , CSS & Firebase"
+    },
+    {
+      "id": 2,
+      "name": "SM-URL",
+      "url": "https://sm-url.netlify.app/",
+      "techStack": "React JS , Tailwind & Appwrite"
     }
+
   ]
 }
