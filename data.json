@@ -101,7 +101,12 @@
       "name": "SM-URL",
       "url": "https://sm-url.netlify.app/",
       "techStack": "React JS , Tailwind & Appwrite"
+    },
+    {
+      "id": 3,
+      "name": "ANON-MSNGR",
+      "url": "https://anon-msngr.netlify.app/",
+      "techStack": "React JS , Tailwind & Appwrite"
     }
-
   ]
 }
